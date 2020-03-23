@@ -1,4 +1,4 @@
-const { asyncDeleteAll, deleteAll, insertUser, getAllUsers, getUserById } = require('./UserDatabase');
+const { deleteAll, getAllUsers, getUserById, insertUser } = require('./UserDatabase');
 
 const users = [
     {
@@ -13,7 +13,7 @@ const users = [
 
 describe('User database manipulation', () => {
     it('delete all users', async () => {
-        await asyncDeleteAll();
+        await deleteAll();
     });
 
     it('insert users', async () => {

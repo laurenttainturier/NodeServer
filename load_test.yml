@@ -1,0 +1,14 @@
+config:
+  target: 'http://localhost:3000'
+  phases:
+    - duration: 30
+      arrivalRate: 100
+scenarios:
+  - flow:
+      - get:
+          url: "/users"
+      - post:
+          url: "/users"
+          json:
+            firstname: Triphon
+            lastname: Dupont
